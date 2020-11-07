@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cas-service
+  name: hello-blue-whale
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: cas-service
-      version: latest
+      app: hello-whale-app
+      version: blue
   template:
     metadata:
-      name: cas-service-pod
+      name: hello-blue-whale-pod
       labels:
-        app: cas-service
-        version: latest
+        app: hello-whale-app
+        version: blue
     spec:
       containers:
-      - name: cas-service
-        image: 10.10.10.32:5000/cas-service:latest
+      - name: hello-whale-container
+        image: ma7moudhalim/hellowhale:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -26,13 +26,13 @@ spec:
 apiVersion: v1
 kind: Service 
 metadata:
-  name: cas-service-svc
+  name: hello-whale-svc
   labels:
-    app: cas-service
+    app: hello-whale-app
 spec:
   selector:
-    app: cas-service
-    version: latest
+    app: hello-whale-app
+    version: blue
   type: NodePort
   ports:
   - nodePort: 31113
