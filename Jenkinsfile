@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   stages {
-
+/*
     stage('Checkout Source') {
       steps {
         git url:'https://github.com/ma7m0ud/hellowhale.git', branch:'master'
@@ -29,7 +29,7 @@ pipeline {
             }
         }
 
-    
+  */  
     stage('Deploy App') {
       steps {
         script {
