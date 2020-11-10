@@ -49,7 +49,6 @@ spec:
         - name: EUREKA_INSTANCE_HOSTNAME
           value: ${MY_POD_NAME}.eureka
   # No need to start the pods in order. We just need the stable network identity
-podManagementPolicy: "Parallel"
 ---
 apiVersion: apps/v1
 kind: Deployment
