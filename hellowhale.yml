@@ -41,7 +41,6 @@ spec:
           limits:
             memory: "256M"
             cpu: "0.4"
-      restartPolicy: Never
 ---
 apiVersion: v1
 kind: Service
