@@ -9,7 +9,7 @@ pipeline {
         git url:'https://github.com/ma7m0ud/hellowhale.git', branch:'master'
       }
     }
-    
+   /* 
       stage("Build image") {
             steps {
                 script {
@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-
+*/
     stage('Deploy App') {
       steps {
         script {
