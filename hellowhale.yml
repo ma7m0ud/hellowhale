@@ -19,7 +19,7 @@ spec:
       - name: eureka
         image: "10.10.10.32:5000/eureka-service:1.0.0.33"
         ports:
-        - containerPort: 8761
+        - containerPort: 8301
         env: 
         - name: EUREKA_PORT
           value: "8301"
