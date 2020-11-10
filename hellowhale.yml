@@ -41,7 +41,7 @@ spec:
           limits:
             memory: "256M"
             cpu: "0.4"
-            restartPolicy: Never
+      restartPolicy: Never
   backoffLimit: 4
 ---
 apiVersion: v1
