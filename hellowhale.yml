@@ -1,11 +1,10 @@
 ---
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: eureka
 spec:
   serviceName: "eureka"
-  podManagementPolicy: "Parallel" 
   replicas: 1
   selector:
     matchLabels:
