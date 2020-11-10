@@ -26,21 +26,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8301
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8301
-          initialDelaySeconds: 300
-          periodSeconds: 60
-          timeoutSeconds: 2
-          failureThreshold: 2
-        resources:
-          requests:
-            memory: "128M"
-            cpu: "0.2"
-          limits:
-            memory: "256M"
-            cpu: "0.4"
 ---
 apiVersion: v1
 kind: Service
