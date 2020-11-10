@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: eureka
-        image: "10.10.10.32:5000/eureka-service"
+        image: "10.10.10.32:5000/eureka-service:1.0.0.34"
         command: ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar","/app/eureka-service.jar"]
         ports:
         - containerPort: 8761
